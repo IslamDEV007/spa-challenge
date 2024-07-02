@@ -2,8 +2,31 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .checkboxLabel {
   margin-right:10px;
+  color: var(--emerald-700);
+}
+
+.checkboxInput {
+  background-color: #fff;
+  border: 1px solid var(--emerald-500);
+  border-radius: 4px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.checkboxInput:checked::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--emerald-500);
+  border-radius: 3px;
 }

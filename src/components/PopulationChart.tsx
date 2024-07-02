@@ -35,7 +35,9 @@ const PopulationChart: React.FC<PopulationChartProps> = ({prefCode}) => {
         <button onClick={() => setPopulationType('老年人口')}>老年人口</button>
       </div>
       <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={populationData}>
+        <LineChart 
+          data={populationData}
+          >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="year" />
           <YAxis />

@@ -36,6 +36,7 @@ const PrefectureCheckboxes: React.FC<{ onPrefectureSelect: (prefCode: number) =>
           <input
             type="checkbox"
             value={pref.prefCode}
+            className={styles.checkboxInput}
             onChange={() => handleCheckboxChange(pref.prefCode) }
           />
           {pref.prefName}

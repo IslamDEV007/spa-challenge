@@ -1,15 +1,51 @@
 .chartContainer {
-  margin-top: 20px;
+  margin-top:20px;
+  padding:0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .populationTypeSelector {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .populationTypeSelector button {
   margin:0 10px;
   padding:10px 20px;
-  cursor: pointer;
+  background-color: var(--emerald-400);
+  border:none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s, padding 0.3s, font-size 0.3s;
+}
+
+.populationTypeSelector button:hover {
+  background-color: var(--emerald-600);
+}
+
+@media (max-width: 768px) {
+  .chartContainer {
+    padding: 0 5px;
+  }
+
+  .populationTypeSelector button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chartContainer {
+    padding: 0 2px;
+  }
+
+  .populationTypeSelector button {
+    padding: 6px;
+    font-size: 10px;
+  }
 }
