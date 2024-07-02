@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_KEY = "5JDt8B3a7T90SX59M5ZWN07mMOI3HXcFGNePuDdx";
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 const BASE_URL = 'https://opendata.resas-portal.go.jp/api/v1';
 
 export const fetchPrefectures = async () => {
