@@ -7,7 +7,7 @@ type Prefecture = {
   prefName: string;
 }
 
-const PrefectureCheckboxes: React.FC = () => {
+const PrefectureCheckboxes: React.FC<{ onPrefectureSelect: (prefCode: number) => void }> = ({ onPrefectureSelect }) => {
   const [prefectures, setPrefectures] = useState<Prefecture[]>([]);
   const [selectedPrefectures, setSelectedPrefectures] = useState<number[]>([]);
   
@@ -20,7 +20,7 @@ const PrefectureCheckboxes: React.FC = () => {
     getPrefectures();
   }, []);
 
-  const handleCheckboxChanges = (prefCode: number) => {
+  const handleCheckboxChange = (prefCode: number) => {
     setSelectedPrefectures((prev) =>
     prev.includes(prefCode)
       ?prev.filter((code) => code !== prefCode)
@@ -34,7 +34,7 @@ const PrefectureCheckboxes: React.FC = () => {
           <input
             type="checkbox"
             value={pref.prefCode}
-            onChange={() => handleCheckboxChanges(pref.prefCode) }
+            onChange={() => handleCheckboxChange(pref.prefCode) }
           />
           {pref.prefName}
         </label>
