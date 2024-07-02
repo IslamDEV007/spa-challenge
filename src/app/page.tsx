@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import PrefectureCheckboxes from "@/components/PrefectureCheckboxes/index";
-import PopulationChart from "@/components/PopulationChart";
+import PopulationChart from "@/components/PopulationChart/PopulationChart";
 import styles from "./page.module.css"
 
 
