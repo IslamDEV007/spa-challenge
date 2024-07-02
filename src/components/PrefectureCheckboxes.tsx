@@ -23,8 +23,10 @@ const PrefectureCheckboxes: React.FC<{ onPrefectureSelect: (prefCode: number) =>
   const handleCheckboxChange = (prefCode: number) => {
     setSelectedPrefectures((prev) =>
     prev.includes(prefCode)
-      ?prev.filter((code) => code !== prefCode)
-    : [...prev, prefCode] )
+    ? prev.filter((code) => code !== prefCode)
+    : [...prev, prefCode] );
+
+    onPrefectureSelect(prefCode);
   };
 
   return (

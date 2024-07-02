@@ -13,7 +13,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <h1>Population Trends by Prefecture</h1>
+      <h1>都道府県別の総人口推移</h1>
       <PrefectureCheckboxes onPrefectureSelect={handlePrefectureSelection}/>
       {selectedPrefCode && <PopulationChart prefCode={selectedPrefCode}/>}
     </div>
