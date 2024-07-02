@@ -7,7 +7,6 @@ export const fetchPrefectures = async () => {
   const response = await axios.get(`${BASE_URL}/prefectures`, {
     headers: {'X-API-KEY': API_KEY},
   });
-  console.log("Logging Prefectures", response.data.result)
   return response.data.result;
 }
 
@@ -16,6 +15,5 @@ export const fetchPopulationComposition = async (prefCode: number) => {
     params: {cityCode: '-', prefCode },
     headers: {'X-API-KEY': API_KEY},
   });
-  console.log("Logging the population composition data",response.data.result)
   return response.data.result;
 };
