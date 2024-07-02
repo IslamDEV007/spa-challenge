@@ -20,7 +20,7 @@ const PopulationChart: React.FC<PopulationChartProps> = ({prefCode}) => {
     const getPopulationData = async () => {
       const data = await fetchPopulationComposition(prefCode);
       const filteredData = data.data.find((item: any) => item.label === populationType);
-      setPopulationType(filteredData);
+      setPopulationData(filteredData);
     };
 
     getPopulationData();
