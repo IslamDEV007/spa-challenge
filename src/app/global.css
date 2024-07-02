@@ -1,0 +1,45 @@
+
+:root {
+  --emerald-50: #E0F8E6;
+  --emerald-100: #B3ECC1;
+  --emerald-200: #80DF99;
+  --emerald-300: #4DD270;
+  --emerald-400: #26C755;
+  --emerald-500: #0EBB39;  
+  --emerald-600: #0CA832;
+  --emerald-700: #0A922A;
+  --emerald-800: #087C23;
+  --emerald-900: #065E17;
+
+  --text-color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  background-color: var(--emerald-100);
+  color: var(--text-color);
+}
+
+h1 {
+  color: var(--emerald-500);
+  text-align: center;
+}
+
+a {
+  color: var(--emerald-500);
+}
+
+button {
+  background-color: var(--emerald-500);
+  border: none;
+  border-radius: 5px;
+  color:white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--emerald-600);
+}
+

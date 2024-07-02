@@ -3,12 +3,12 @@ import { fetchPopulationComposition } from "@/utils/api";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import styles from "./PopulationChart.module.css"
 
-type PopulationData = {
+interface PopulationData {
    year: number;
    value: number;
 }
 
-type PopulationChartProps = {
+interface PopulationChartProps {
   prefCode: number;
 }
 
@@ -20,7 +20,7 @@ const PopulationChart: React.FC<PopulationChartProps> = ({prefCode}) => {
     const getPopulationData = async () => {
       const data = await fetchPopulationComposition(prefCode);
       const filteredData = data.data.find((item: any) => item.label === populationType);
-      setPopulationData(filteredData);
+      setPopulationData(filteredData.data);
     };
 
     getPopulationData();
@@ -35,7 +35,9 @@ const PopulationChart: React.FC<PopulationChartProps> = ({prefCode}) => {
         <button onClick={() => setPopulationType('老年人口')}>老年人口</button>
       </div>
       <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={populationData}>
+        <LineChart 
+          data={populationData}
+          >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="year" />
           <YAxis />
