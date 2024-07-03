@@ -28,6 +28,7 @@ const PopulationChart: React.FC<PopulationChartProps> = ({ prefCode }) => {
     setPopulationType(type);
   }, []);
 
+
   return (
     <div className={styles.chartContainer}>
       <PopulationTypeSelector onTypeChange={handlePopulationTypeChange} />
