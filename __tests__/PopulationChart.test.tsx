@@ -45,13 +45,11 @@ describe('PopulationChart', () => {
 
     await waitFor(() => expect(fetchPopulationComposition).toHaveBeenCalledWith(1));
 
-    // Check for SVG elements that indicate the chart is rendered
     await waitFor(() => {
       const svgElements = document.querySelectorAll('svg');
       expect(svgElements.length).toBeGreaterThan(0);
     });
 
-    // Check for specific chart content
     await waitFor(() => {
       expect(screen.getByText('2000')).toBeInTheDocument();
       expect(screen.getByText('2010')).toBeInTheDocument();
