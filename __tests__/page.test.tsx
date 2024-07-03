@@ -1,7 +1,6 @@
 import { render, screen, fireEvent} from '@testing-library/react';
 import Home from '@/app/page';
 import '@testing-library/jest-dom';
-import PrefectureCheckboxes from '@/components/PrefectureCheckboxes/PrefectureCheckboxes';
 
 jest.mock('../src/components/PrefectureCheckboxes/PrefectureCheckboxes.tsx', () => {
   return {
