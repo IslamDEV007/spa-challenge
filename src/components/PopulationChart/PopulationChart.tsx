@@ -1,4 +1,3 @@
-// components/PopulationChart/PopulationChart.tsx
 import React, { useState, useEffect, useCallback } from "react";
 import { fetchPopulationComposition } from "@/utils/api";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
