@@ -1,39 +1,57 @@
 # spa-challenge
 
-=======
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## このプロジェクトは、様々な日本の都道府県の人口推移を視覚化するNext.jsアプリケーションです。外部APIからデータを取得し、ユーザーのインタラクションのためにチャートとチェックボックスを使用して表示します。
 
-## Getting Started
+## Installation
 
-First, run the development server:
+### Prerequisites / 前提条件
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Make sure you have the following software installed on your machine: / 以下のソフトウェアがインストールされていることを確認してください：
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Node.js](https://nodejs.org/) (version 12.x or later / バージョン12.x以上)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Steps / 手順
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository: / リポジトリをクローンする：**
+   Clone the project repository from GitHub to your local machine using the following command: / 次のコマンドを使用して、GitHubからプロジェクトリポジトリをローカルマシンにクローンします：
 
-## Learn More
+   ```bash
+   git clone https://github.com/IslamDEV007/spa-challenge.git
 
-To learn more about Next.js, take a look at the following resources:
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Navigate to the project directory: / プロジェクトディレクトリに移動する：**
+   **Change the current directory to the project folder: / プロジェクトフォルダにディレクトリを変更します：**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   cd your-next-project
 
-## Deploy on Vercel
+3. **Install dependencies: / 依存関係をインストールする：**
+   **Install the necessary dependencies using npm or Yarn: / npmまたはYarnを使用して必要な依存関係をインストールします：**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Using npm: / npmを使用する場合：
+   npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   Using Yarn: / Yarnを使用する場合：
+   yarn install
+
+4. **Set up environment variables: / 環境変数を設定する：**
+   **Create a .env.local file in the root of the project and add your environment variables. For example: / プロジェクトのルートに .env.local ファイルを作成し、環境変数を追加します。例えば：**
+
+   NEXT_PUBLIC_API_URL=YOUR-API-KEY
+
+   Make sure to update these variables with actual values relevant to your project. / これらの変数は、プロジェクトに関連する実際の値に更新してください。
+
+5. **Run the development server: / 開発サーバーを起動する：**
+   **Start the development server to run the project locally: / 開発サーバーを起動してプロジェクトをローカルで実行します：**
+
+   Using npm: / npmを使用する場合：
+   npm run dev
+
+   Using Yarn: / Yarnを使用する場合：
+   yarn dev
+
+   The application will be available at http://localhost:3000. / アプリケーションは http://localhost:3000 で利用可能になります。
+
+   **To run tests: / テストを実行する場合：**
+   npm test
