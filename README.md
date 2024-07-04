@@ -48,7 +48,13 @@ Make sure you have the following software installed on your machine: / 以下の
    yarn install
    ```
 
-4. **Set up environment variables: / 環境変数を設定する：**
+4. **For ESLint and Prettier configuration, refer to the Next.js ESLint documentation and Next.js Prettier documentation/ESLintとPrettierの設定については、Next.jsのESLintドキュメントとNext.jsのPrettierドキュメントを参照してください。**
+
+```bash
+  https://nextjs.org/docs/pages/building-your-application/configuring/eslint
+```
+
+5. **Set up environment variables: / 環境変数を設定する：**
    **Create a .env.local file in the root of the project and add your environment variables. For example: / プロジェクトのルートに .env.local ファイルを作成し、環境変数を追加します。例えば：**
 
 ```bash
@@ -57,7 +63,7 @@ NEXT_PUBLIC_API_URL=YOUR-API-KEY
 
 Make sure to update these variables with actual values relevant to your project. / これらの変数は、プロジェクトに関連する実際の値に更新してください。
 
-5. **Run the development server: / 開発サーバーを起動する：**
+6. **Run the development server: / 開発サーバーを起動する：**
    **Start the development server to run the project locally: / 開発サーバーを起動してプロジェクトをローカルで実行します：**
 
 Using npm: / npmを使用する場合：
