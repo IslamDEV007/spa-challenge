@@ -4,6 +4,17 @@ import styles from './PrefectureCheckboxes.module.css';
 import { Prefecture } from "@/types";
 import RenderPrefectures from "./renderPrefectures";
 
+/**
+ * PrefectureCheckboxes component to render checkboxes for selecting prefectures.
+ * PrefectureCheckboxesコンポーネントは、都道府県を選択するためのチェックボックスをレンダリングします。
+ *
+ * @param {Object} props - The properties for the PrefectureCheckboxes component.
+ *                        PrefectureCheckboxesコンポーネントのプロパティ。
+ * @param {(prefCode: number) => void} props.onPrefectureSelect - Callback function to handle prefecture selection.
+ *                                                              都道府県選択を処理するコールバック関数。
+ * @returns {JSX.Element} The rendered PrefectureCheckboxes component. / レンダリングされたPrefectureCheckboxesコンポーネント。
+ */
+
 const PrefectureCheckboxes: React.FC<{ onPrefectureSelect: (prefCode: number) => void }> = ({ onPrefectureSelect }) => {
   const [prefectures, setPrefectures] = useState<Prefecture[]>([]);
   const [selectedPrefectures, setSelectedPrefectures] = useState<number[]>([]);

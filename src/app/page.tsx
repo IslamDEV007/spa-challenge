@@ -4,6 +4,12 @@ import PrefectureCheckboxes from "@/components/PrefectureCheckboxes/PrefectureCh
 import PopulationChart from "@/components/PopulationChart/PopulationChart";
 import styles from "./page.module.css"
 
+/**
+ * Home component that serves as the main page of the application.
+ * Homeコンポーネントはアプリケーションのメインページとして機能します。
+ *
+ * @returns {JSX.Element} The rendered Home component. / レンダリングされたHomeコンポーネント。
+ */
 
 const Home: React.FC = () => {
   const [selectedPrefCode, setSelectedPrefCode] = useState<number | null> (null);

@@ -5,9 +5,22 @@ import styles from "./PopulationChart.module.css";
 import { PopulationData } from "@/types";
 import PopulationTypeSelector from "./PopulationTypeSelector";
 
+/**
+ * Props for PopulationChart component.
+ * PopulationChartコンポーネントのプロパティ。
+ */
 interface PopulationChartProps {
   prefCode: number;
 }
+
+/**
+ * PopulationChart component to display population trends for a selected prefecture.
+ * PopulationChartコンポーネントは、選択された都道府県の人口推移を表示します。
+ *
+ * @param {PopulationChartProps} props - The properties for the PopulationChart component.
+ *                                      PopulationChartコンポーネントのプロパティ。
+ * @returns {JSX.Element} The rendered PopulationChart component. / レンダリングされたPopulationChartコンポーネント。
+ */
 
 const PopulationChart: React.FC<PopulationChartProps> = ({ prefCode }) => {
   const [populationData, setPopulationData] = useState<PopulationData[]>([]);

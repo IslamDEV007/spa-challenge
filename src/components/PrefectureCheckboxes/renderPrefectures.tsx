@@ -2,10 +2,23 @@ import React, { useMemo } from "react";
 import styles from './PrefectureCheckboxes.module.css';
 import { Prefecture } from "@/types";
 
+/**
+ * Props for RenderPrefectures component.
+ * RenderPrefecturesコンポーネントのプロパティ。
+ */
 type RenderPrefecturesProps = {
   prefectures: Prefecture[];
   handleCheckboxChange: (prefCode: number) => void;
 };
+
+/**
+ * RenderPrefectures component to render checkboxes for each prefecture.
+ * RenderPrefecturesコンポーネントは、各都道府県のチェックボックスをレンダリングします。
+ *
+ * @param {RenderPrefecturesProps} props - The properties for the RenderPrefectures component.
+ *                                        RenderPrefecturesコンポーネントのプロパティ。
+ * @returns {JSX.Element} The rendered RenderPrefectures component. / レンダリングされたRenderPrefecturesコンポーネント。
+ */
 
 const RenderPrefectures: React.FC<RenderPrefecturesProps> = ({ prefectures, handleCheckboxChange }) => {
   return useMemo(() => {

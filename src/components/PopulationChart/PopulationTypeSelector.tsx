@@ -1,9 +1,22 @@
 import React, { useCallback } from "react";
 import styles from "./PopulationChart.module.css";
 
+/**
+ * Props for PopulationTypeSelector component.
+ * PopulationTypeSelectorコンポーネントのプロパティ。
+ */
 interface PopulationTypeSelectorProps {
   onTypeChange: (type: string) => void;
 }
+
+/**
+ * PopulationTypeSelector component to select the type of population data to display.
+ * PopulationTypeSelectorコンポーネントは、表示する人口データの種類を選択します。
+ *
+ * @param {PopulationTypeSelectorProps} props - The properties for the PopulationTypeSelector component.
+ *                                             PopulationTypeSelectorコンポーネントのプロパティ。
+ * @returns {JSX.Element} The rendered PopulationTypeSelector component. / レンダリングされたPopulationTypeSelectorコンポーネント。
+ */
 
 const PopulationTypeSelector: React.FC<PopulationTypeSelectorProps> = ({ onTypeChange }) => {
   const populationTypes = [
